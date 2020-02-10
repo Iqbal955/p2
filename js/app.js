@@ -9,16 +9,21 @@ const showPage = (list, page) => {
   
  for(i=0;i<list.length; i++) {
     
-    if(i >= startIndex && i <= endIndex) {
+    if(i >= 0 && i <= 10) {
+      
+      list[i].style.display = "";
+      
+    }
+   
+    else(i >= startIndex && i <= endIndex) {
       
       list[i].style.display = "";
       
     }
   }
   
-  
  
   //How would I call to test the function?
   
 }
-console.log(showPage(list, 1));
+showPage(list, 1)
