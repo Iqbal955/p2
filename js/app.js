@@ -17,7 +17,7 @@ const showPage = (list, page) => {
    
     else(i >= startIndex && i <= endIndex) {
       
-      list[i].style.display = "";
+      list[i].style.display = "none";
       
     }
   }
@@ -27,3 +27,23 @@ const showPage = (list, page) => {
   
 }
 showPage(list, 1)
+
+
+
+
+*/
+const appendPageLinks = (links) => {
+  
+  const div = document.createElement(div);
+  div.setAttribute("class", "“pagination”");
+  div.appendChild(page);
+  
+  
+  const ul = document.createElement(ul);
+  
+  ul.appendChild(div);
+
+  
+  
+}
+/*
