@@ -15,18 +15,19 @@ const showPage = (list, page) => {
       
     }
    
-    else(i >= startIndex && i <= endIndex) {
+    else if(i >= startIndex && i <= endIndex) {
       
       list[i].style.display = "none";
       
     }
   }
   
- 
-  //How would I call to test the function?
+
   
 }
-showPage(list, 1)
+showPage(list, 1);
+
+
 
 
 const appendPageLinks = (links) => {
@@ -40,7 +41,7 @@ const appendPageLinks = (links) => {
   
   const ul = document.createElement(ul); //creating the ul element
   
-  ul.appendChild(div); //append div to li
+         ul.appendChild(div); //append div to li
   
   
   
@@ -48,30 +49,33 @@ const appendPageLinks = (links) => {
             
           const li = document.createElement("li"); //create every li element
           const a = document.createElement("a"); //create an a tag element
-          li.appendChild(a); //append li to the a element
-          a.textContent(i); //setting the text content of a to the i'th number
-    
-             li.textContent(i); 
+                 li.appendChild(a); //append li to the a element
+                 a.textContent(i); //setting the text content of a to the i'th number
+                 li.textContent(i); 
          
 
    
   
 
-  for (j=0: j<a.length; j++) { //for every a tag
-    a.addEventListener("click", "") { //add an eventlistner when ever it is pressed
+  for (j=0; j<a.length; j++) { //for every a tag
+    a.addEventListener("click", "");  //add an eventlistner when ever it is pressed
     
   const divLength =  e.target.className = "active"; //target the active class and removing it
   divLength.removeClass;
+    
+    
+    
+    //remainding:
       
 // The active class name should be added to the link that was just clicked. The target property of the event object should be useful here. ? 
    //   The function to show a page should be called, passing in as arguments, the global variable for the list items, and the page number that should be shown. The text content of the A element that was just clicked can be helpful here.
-  }
+  
       
     
   }
 }
   } 
     
-  
+ 
   
 
