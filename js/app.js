@@ -53,14 +53,14 @@ function appendPageLinks (list) {
           a.href = "#";
           div.appendChild(ul); //append div to li
           
-                                 }
+                                 
    
           a.addEventListener("click", (e) => { //add an eventlistner when ever it is pressed
     
           const divLength =  e.target.className = "active"; //target the active class and removing it
           divLength.removeClass;
     
-    
+          });
     
     //remainding:
       
