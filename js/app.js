@@ -60,16 +60,16 @@ function appendPageLinks (list) {
           const divLength =  e.target.className = "active"; //target the active class and removing it
           divLength.removeClass;
     
-          });
+          })
     
     //remainding:
       
 // The active class name should be added to the link that was just clicked. The target property of the event object should be useful here. ? 
    //   The function to show a page should be called, passing in as arguments, the global variable for the list items, and the page number that should be shown. The text content of the A element that was just clicked can be helpful here
-                             })
+                             }
   } 
     
-
-appendPageLinks();
+showPage(list, 1);
+appendPageLinks(list);
   
 
