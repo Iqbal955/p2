@@ -33,18 +33,14 @@ const showPage = (list, page) => {
 
 
 
-const appendPageLinks = (list) => {
+function appendPageLinks (list) {
   
   
   const pageNumbers = page.length/maxprPage; //Dividing the page.length with the max amount items pr page
-  const div = document.createElement("div"); //creating the div element
-  div.setAttribute("class", "pagination"); //setting the class to pagination
-  div.appendChild(page); //append page to div
-  
-  
-  const ul = document.createElement(ul); //creating the ul element
-  
-  ul.appendChild(div); //append div to li
+  const div = document.createElement("div"); //creating the div element 
+  const ul = document.createElement("ul"); //creating the ul element
+  ul.className = "pagination";
+
   
   
   
@@ -53,13 +49,13 @@ const appendPageLinks = (list) => {
           const li = document.createElement("li"); //create every li element
           const a = document.createElement("a"); //create an a tag element
           li.appendChild(a); //append li to the a element
-          a.textContent(i); //setting the text content of a to the i'th number
-    
+          a.textContent = i; //setting the text content of a to the i'th number
+          a.href = "#";
+          div.appendChild(ul); //append div to li
           
-
+                                 }
    
-  for (j=0; j<a.length; j++) { //for every a tag
-          a.addEventListener("click", (e));  //add an eventlistner when ever it is pressed
+          a.addEventListener("click", (e) => { //add an eventlistner when ever it is pressed
     
           const divLength =  e.target.className = "active"; //target the active class and removing it
           divLength.removeClass;
@@ -69,18 +65,11 @@ const appendPageLinks = (list) => {
     //remainding:
       
 // The active class name should be added to the link that was just clicked. The target property of the event object should be useful here. ? 
-   //   The function to show a page should be called, passing in as arguments, the global variable for the list items, and the page number that should be shown. The text content of the A element that was just clicked can be helpful here.
-  
-    
-    
-    
-      
-    
-  }
-}
+   //   The function to show a page should be called, passing in as arguments, the global variable for the list items, and the page number that should be shown. The text content of the A element that was just clicked can be helpful here
+                             })
   } 
     
- showPage(list, 1);
-appendPageLinks(list);
+
+appendPageLinks();
   
 
