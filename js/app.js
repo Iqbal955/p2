@@ -36,10 +36,11 @@ const showPage = (list, page) => {
 function appendPageLinks (list) {
   
   
-  const pageNumbers = page.length/maxprPage; //Dividing the page.length with the max amount items pr page
+  const pageNumbers = Math.ceil(page.length/maxprPage); //Dividing the page.length with the max amount items pr page
   const div = document.createElement("div"); //creating the div element 
   const ul = document.createElement("ul"); //creating the ul element
-  ul.className = "pagination";
+  div.className = "pagination"; //assign className to the div
+  div.appendChild(ul); //append the ul to the div
 
   
   
@@ -51,14 +52,25 @@ function appendPageLinks (list) {
           li.appendChild(a); //append li to the a element
           a.textContent = i; //setting the text content of a to the i'th number
           a.href = "#";
-          div.appendChild(ul); //append div to li
           
                                  
    
-          a.addEventListener("click", (e) => { //add an eventlistner when ever it is pressed
+          a.addEventListener("click", function(e) => { //add an eventlistner when ever it is pressed
     
-          const divLength =  e.target.className = "active"; //target the active class and removing it
-          divLength.removeClass;
+       var pagination = document.querySelector("pagination a");
+            for(let i = 0; i<pagination.length; i++) {
+              
+              
+              pagination[i].className = "";
+              
+              
+            }
+            
+            e.target.classList.add("active");
+            
+            
+            
+            showPage(list, e.target.innerHTML);
     
           })
     
