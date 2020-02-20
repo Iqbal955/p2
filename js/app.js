@@ -55,22 +55,22 @@ function appendPageLinks (list) {
           
                                  
    
-          a.addEventListener("click", function(e) => { //add an eventlistner when ever it is pressed
+          a.addEventListener("click", (e) => { //add an eventlistner when ever it is pressed //shouldnt the whole function be on the
     
-       var pagination = document.querySelector("pagination a");
-            for(let i = 0; i<pagination.length; i++) {
+              var pagination = document.querySelector("pagination a"); //targetting the a of pagination class
+             for(let i = 0; i<pagination.length; i++) {
               
               
-              pagination[i].className = "";
+              pagination[i].className = ""; //setting the pagination empty(`why?)
               
               
             }
             
-            e.target.classList.add("active");
+            e.target.classList.add("active"); //so the button that has been clicken, the active class has been added, and the active class has been added, so it will display?
             
             
             
-            showPage(list, e.target.innerHTML);
+            showPage(list, e.target.innerHTML); //not sure whats happening here
     
           })
     
@@ -81,7 +81,7 @@ function appendPageLinks (list) {
                              }
   } 
     
-showPage(list, 1);
-appendPageLinks(list);
+showPage(list, 1); //so I call the showpage, to display the first page
+appendPageLinks(list); // whats happening here?
   
 
