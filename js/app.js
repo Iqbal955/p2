@@ -3,20 +3,23 @@ const list = document.querySelectorAll(".student-item");
 const page = document.querySelectorAll(".page");
 const maxprPage = 10;
 
-const showPage = (list, page) => {
+
+//show page function
+
+    function showPage (list, page) => {
   
- const startIndex = (page * 9) - 9;
- const endIndex = page * 9;
+        const startIndex = (page * 9) - 9;
+        const endIndex = page * 9;
   
- for(i=0;i<list.length; i++) {
+          for(i=0;i<list.length; i++) {
     
-    if(i >= startIndex && i <= endIndex) {
+            if(i >= startIndex && i <= endIndex) {
       
-      list[i].style.display = "";
+               list[i].style.display = "";
       
     }
    
-   else{
+        else{
    
 
       
@@ -26,7 +29,6 @@ const showPage = (list, page) => {
   }
   
  
-  //How would I call to test the function?
   
 }
 
@@ -66,18 +68,13 @@ function appendPageLinks (list) {
               
             }
             
-            e.target.classList.add("active"); //so the button that has been clicken, the active class has been added, and the active class has been added, so it will display?
-            
-            
+            e.target.classList.add("active"); //so the button that has been clicken, the active class has been added, and the active class has been added, so it will display
             
             showPage(list, e.target.innerHTML); //not sure whats happening here
     
           })
-    
-    //remainding:
-      
-// The active class name should be added to the link that was just clicked. The target property of the event object should be useful here. ? 
-   //   The function to show a page should be called, passing in as arguments, the global variable for the list items, and the page number that should be shown. The text content of the A element that was just clicked can be helpful here
+  li.append(a);
+ divPage.append(div);
                              }
   } 
     
