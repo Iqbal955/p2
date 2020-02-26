@@ -1,6 +1,6 @@
-const list = document.querySelectorAll(".student-item");
+const list = document.querySelectorAll(".student-item.cf");
 
-const page = document.querySelectorAll(".page");
+const page = document.querySelector(".page");
 const maxprPage = 10;
 
 
@@ -68,7 +68,7 @@ function appendPageLinks (list) {
               
             }
             
-            e.target.classList.add("active"); //so the button that has been clicken, the active class has been added                                                      added, and the active class has been added, so it will display
+            e.target.classList.add("active"); //so the button that has been clicken, the active class has been                                                      added, and the active class has been added, so it will display
             
             showPage(list, e.target.innerHTML); //not sure whats happening here
     
@@ -76,8 +76,10 @@ function appendPageLinks (list) {
 
 
  li.append(a);
- page.append(div);
+ul.append(li);
 }
+  div.append(ul);
+  page.append(div);
   } 
     
 showPage(list, 1); //so I call the showpage, to display the first page
