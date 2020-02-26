@@ -6,7 +6,7 @@ const maxprPage = 10;
 
 //show page function
 
-    function showPage (list, page) => {
+    function showPage (list, page) {
   
         const startIndex = (page * 9) - 9;
         const endIndex = page * 9;
@@ -57,7 +57,7 @@ function appendPageLinks (list) {
           
                                  
    
-          a.addEventListener("click", (e) => { //add an eventlistner when ever it is pressed //shouldnt the whole function be on the
+          a.addEventListener("click", (e) => { 
     
               var pagination = document.querySelector("pagination a"); //targetting the a of pagination class
              for(let i = 0; i<pagination.length; i++) {
@@ -68,17 +68,17 @@ function appendPageLinks (list) {
               
             }
             
-            e.target.classList.add("active"); //so the button that has been clicken, the active class has been added, and the active class has been added, so it will display
+            e.target.classList.add("active"); //so the button that has been clicken, the active class has been added                                                      added, and the active class has been added, so it will display
             
             showPage(list, e.target.innerHTML); //not sure whats happening here
     
           })
-  li.append(a);
- divPage.append(div);
-                             }
+
+
+ li.append(a);
+ page.append(div);
+}
   } 
     
 showPage(list, 1); //so I call the showpage, to display the first page
 appendPageLinks(list); // whats happening here?
-  
-
