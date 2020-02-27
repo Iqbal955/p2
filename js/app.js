@@ -46,7 +46,7 @@ function appendPageLinks (list) {
 
   
   
-  for (i=0; i< pageNumbers; i++) { //loop through all page elemnts 
+  for (i=1; i< pageNumbers ; i++) { //loop through all page elemnts 
     
    
           const li = document.createElement("li"); //create every li element
