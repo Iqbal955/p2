@@ -54,6 +54,7 @@ function appendPageLinks (list) {
                 li.appendChild(a); //append a to li
                 ul.appendChild(li); //append li to ul
                 div.append(ul); //append to ul
+                div.className = "pagination";
                
                 a.textContent = i; //setting the text content of a to the i'th number
                 a.href = "#";
@@ -61,7 +62,9 @@ function appendPageLinks (list) {
                                  
    
                 a.addEventListener("click", (e) => { 
-    
+                  
+           
+                 
                   var pagination = document.querySelector("pagination a"); //targetting the a of pagination class
                     for(let i = 0; i<pagination.length; i++) {
               
