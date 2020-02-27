@@ -65,7 +65,9 @@ function appendPageLinks (list) {
                   
            
                  
-                  var pagination = document.querySelector("pagination a"); //targetting the a of pagination class
+                  var pagination = document.querySelector(".pagination a"); //targetting the a of pagination class
+                  
+                  console.log(pagination);
                     for(let i = 0; i<pagination.length; i++) {
               
               
