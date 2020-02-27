@@ -1,4 +1,4 @@
-const list = document.querySelectorAll(".student-item.cf");
+const list = document.querySelectorAll(".student-item");
 
 const page = document.querySelector(".page");
 const maxprPage = 10;
@@ -52,35 +52,34 @@ function appendPageLinks (list) {
    
           const li = document.createElement("li"); //create every li element
           const a = document.createElement("a"); //create an a tag element
-                li.append(a); //append a to li
-                ul.append(li); //append li to ul
-          li.appendChild(a); //append li to the a element
-          a.textContent = i; //setting the text content of a to the i'th number
-          a.href = "#";
-          
-                                 
+                li.appendChild(a); //append a to li
+                ul.appendChild(li); //append li to ul
+                div.append(ul); //append to ul
+                a.textContent = i; //setting the text content of a to the i'th number
+                a.href = "#";
+                          
    
-          a.addEventListener("click", (e) => { 
+                a.addEventListener("click", (e) => { 
     
-              var pagination = document.querySelector("pagination a"); //targetting the a of pagination class
-             for(let i = 0; i<pagination.length; i++) {
+                     var pagination = document.querySelector("pagination a"); //targetting the a of pagination class
+                         for(let i = 0; i<pagination.length; i++) {
               
               
-              pagination[i].className = ""; //setting the pagination empty(`why?)
+                              pagination[i].className = ""; //setting the pagination empty(`why?)
               
               
             }
             
-            e.target.classList.add("active"); //so the button that has been clicken, the active class has been                                                      added, and the active class has been added, so it will display
+   e.target.classList.add("active"); //so the button that has been clicken, the active class has been                                                      added, and the active class has been added, so it will display
             
-            showPage(list, e.target.innerHTML); //not sure whats happening here
+   showPage(list, e.target.innerHTML); //not sure whats happening here
     
           })
 
 
 
 }
-  div.append(ul);
+ 
   page.append(div);
   } 
     
