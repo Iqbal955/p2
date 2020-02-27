@@ -47,10 +47,13 @@ function appendPageLinks (list) {
   
   
   
-  for (i=0; i< page.length; i++) { //loop through all page elemnts 
-            
+  for (i=0; i< list.length; i++) { //loop through all page elemnts 
+    
+   
           const li = document.createElement("li"); //create every li element
           const a = document.createElement("a"); //create an a tag element
+                li.append(a); //append a to li
+                ul.append(li); //append li to ul
           li.appendChild(a); //append li to the a element
           a.textContent = i; //setting the text content of a to the i'th number
           a.href = "#";
@@ -75,8 +78,7 @@ function appendPageLinks (list) {
           })
 
 
- li.append(a);
-ul.append(li);
+
 }
   div.append(ul);
   page.append(div);
