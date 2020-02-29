@@ -32,6 +32,22 @@ const maxprPage = 10;
   
 }
 
+const pageHeader = document.querySelector(".page-header");
+
+
+const searchDiv = document.createElement("div");
+searchDiv.setAttribute("class", "student-search");
+pageHeader.appendChild(searchDiv);
+
+const searchInput = document.createElement("input");
+searchInput.setAttribute("placeholder", "Search for student");
+searchDiv.appendChild(searchInput);
+
+const searchButton = document.createElement("button");
+searchButton.textContent = "Search";
+searchDiv.appendChild(searchButton);
+
+
 
 
 
@@ -46,7 +62,7 @@ function appendPageLinks (list) {
 
   
   
-  for (i=1; i< pageNumbers ; i++) { //loop through all page elemnts 
+  for (i=0; i< pageNumbers ; i++) { //loop through all page elemnts 
     
    
           const li = document.createElement("li"); //create every li element
@@ -56,28 +72,22 @@ function appendPageLinks (list) {
                 div.append(ul); //append to ul
                 div.className = "pagination";
                
-                a.textContent = i; //setting the text content of a to the i'th number
+                a.textContent = i + 1; //setting the text content of a to the i'th number
                 a.href = "#";
           
                                  
    
-                a.addEventListener("click", (e) => { 
+   a.addEventListener("click", (e) => { 
                   
-           
-                 
-                  var pagination = document.querySelector(".pagination a"); //targetting the a of pagination class
-                  
-                  console.log(pagination);
-                    for(let i = 0; i<pagination.length; i++) {
-              
-              
-                        pagination[i].className = ""; //setting the pagination empty(`why?)
+            var pagination = document.getElementsByTagName("a"); //targetting the a of pagination class
+                   for(let i = 0; i<pagination.length; i++) {
+                         pagination[i].className = ""; //
+                   
+            e.target.classList.add("active"); //so the button that has been clicken, the active class has been                                                      added, and the active class has been added, so it will display
               
               
             }
-            
-            e.target.classList.add("active"); //so the button that has been clicken, the active class has been                                                      added, and the active class has been added, so it will display
-            
+                     
             showPage(list, e.target.innerHTML); //not sure whats happening here
     
           })
