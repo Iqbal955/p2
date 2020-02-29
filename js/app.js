@@ -9,7 +9,7 @@ const maxprPage = 10;
     function showPage (list, page) {
   
         const startIndex = (page * 9) - 9;
-        const endIndex = page * 9;
+        const endIndex = (page * 9) -1;
   
           for(i=0;i<list.length; i++) {
     
@@ -77,13 +77,20 @@ function appendPageLinks (list) {
           
                                  
    
-   a.addEventListener("click", (e) => { 
+         a.addEventListener("click", (e) => { 
                   
             var pagination = document.getElementsByTagName("a"); //targetting the a of pagination class
-                   for(let i = 0; i<pagination.length; i++) {
-                         pagination[i].className = ""; //
+                  
+                  
+                  
+                       for(let i = 0; i<pagination.length; i++) {
+          
+              
+                          pagination[i].className = ""; //setting the pagination empty(`why?)
                    
-            e.target.classList.add("active"); //so the button that has been clicken, the active class has been                                                      added, and the active class has been added, so it will display
+                   
+                    
+             e.target.classList.add("active"); //so the button that has been clicken, the active class has been                                                      added, and the active class has been added, so it will display
               
               
             }
