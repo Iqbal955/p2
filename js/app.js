@@ -8,8 +8,8 @@ const maxprPage = 10;
 
     function showPage (list, page) {
   
-        const startIndex = (page * 9) - 9;
-        const endIndex = (page * 9) -1;
+        const startIndex = (page * maxprPage) - maxprPage;
+        const endIndex = (page * maxprPage) -1;
   
           for(i=0;i<list.length; i++) {
     
@@ -107,4 +107,4 @@ function appendPageLinks (list) {
   } 
     
 showPage(list, 1); //so I call the showpage, to display the first page
-appendPageLinks(list); // whats happening here?
+appendPageLinks(list); 
