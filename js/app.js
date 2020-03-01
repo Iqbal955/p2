@@ -2,7 +2,7 @@ const list = document.querySelectorAll(".student-item");
 
 const page = document.querySelector(".page");
 const maxprPage = 10;
-const liItem = list.children;
+const liItem = document.querySelectorAll(".student-item cf");
 console.log(liItem);
 
 
@@ -82,7 +82,6 @@ function searchBar(searchInput, list) {
   
   // looping through the list item
     for (let i =0;i< list.length; i++) {
-        list[i].className = "";
             if (searchInput.value.length !== 0 && list[i].textContent.toLowerCase().includes(searchInput.value.toLowerCase())) {
             list[i].className = "match"; 
      
