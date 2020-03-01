@@ -1,9 +1,8 @@
 const list = document.querySelectorAll(".student-item");
-
 const page = document.querySelector(".page");
 const maxprPage = 10;
-const liItem = document.querySelectorAll(".student-item cf");
-console.log(liItem);
+const liItem = document.getElementsByClassName("student-item cf");
+
 
 
 //show page function
@@ -76,20 +75,21 @@ searchDiv.appendChild(searchButton);
 function searchBar(searchInput, list) {
   
   
-  console.log(searchInput);
-  console.log(list);
+ 
   
   
   // looping through the list item
     for (let i =0;i< list.length; i++) {
             if (searchInput.value.length !== 0 && list[i].textContent.toLowerCase().includes(searchInput.value.toLowerCase())) {
-            list[i].className = "match"; 
-     
-  
-     
+            list[i].style.display = "block";
+           var match = list[i].classList.add('match');
 
    }
-     
+     else {
+       
+       list[i].style.display = "none";
+       
+     }
      
    }
     
