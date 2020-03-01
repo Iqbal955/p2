@@ -2,6 +2,8 @@ const list = document.querySelectorAll(".student-item");
 
 const page = document.querySelector(".page");
 const maxprPage = 10;
+const liItem = list.children;
+console.log(liItem);
 
 
 //show page function
@@ -35,17 +37,76 @@ const maxprPage = 10;
 const pageHeader = document.querySelector(".page-header");
 
 
+
+
+
+
+/*
+
+
+
+                Search Function
+
+
+
+
+*/
+
+//Div
 const searchDiv = document.createElement("div");
 searchDiv.setAttribute("class", "student-search");
 pageHeader.appendChild(searchDiv);
+
+//Input
 
 const searchInput = document.createElement("input");
 searchInput.setAttribute("placeholder", "Search for student");
 searchDiv.appendChild(searchInput);
 
+//SearchButton
+
 const searchButton = document.createElement("button");
 searchButton.textContent = "Search";
 searchDiv.appendChild(searchButton);
+
+
+
+ 
+//Function using search input and the list
+function searchBar(searchInput, list) {
+  
+  
+  console.log(searchInput);
+  console.log(list);
+  
+  
+  // looping through the list item
+    for (let i =0;i< list.length; i++) {
+        list[i].className = "";
+            if (searchInput.value.length !== 0 && list[i].textContent.toLowerCase().includes(searchInput.value.toLowerCase())) {
+            list[i].className = "match"; 
+     
+  
+     
+
+   }
+     
+     
+   }
+    
+    
+    
+  }
+  
+  //Adding the event listener
+searchButton.addEventListener('click', (event) => {
+  event.preventDefault();
+ searchBar(searchInput, list);
+
+  console.log('Test');
+});
+
+   
 
 
 
@@ -107,4 +168,4 @@ function appendPageLinks (list) {
   } 
     
 showPage(list, 1); //so I call the showpage, to display the first page
-appendPageLinks(list); 
+appendPageLinks(list); // whats happening here?
